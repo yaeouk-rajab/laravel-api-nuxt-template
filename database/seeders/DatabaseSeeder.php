@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         if (! app()->environment(['local', 'testing'])) {
-            $this->command->error('DatabaseSeeder only seeds local/testing environments.');
+            $this->command?->error('DatabaseSeeder only seeds local/testing environments.');
 
             return;
         }
@@ -29,6 +29,6 @@ class DatabaseSeeder extends Seeder
             ],
         );
 
-        $this->command->info('Admin login: admin@example.test / password');
+        $this->command?->info('Admin login: admin@example.test / password');
     }
 }
