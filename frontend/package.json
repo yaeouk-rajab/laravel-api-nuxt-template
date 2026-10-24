@@ -12,10 +12,11 @@
     "lint:fix": "eslint . --fix",
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "screenshots": "playwright test --config=playwright.screenshots.config.ts"
   },
   "dependencies": {
-    "nuxt": "^4.6.0",
+    "nuxt": "^4.6.2",
     "ofetch": "^1.5.1",
     "vue": "^3.5.43",
     "vue-router": "^5.3.1"
@@ -27,7 +28,7 @@
     "@types/node": "^22.20.5",
     "@vue/test-utils": "^2.5.1",
     "eslint": "^10.0.0",
-    "happy-dom": "^20.14.5",
+    "happy-dom": "^21.0.4",
     "typescript": "^5.9.3",
     "vitest": "^5.0.3",
     "vue-tsc": "^3.3.12"
