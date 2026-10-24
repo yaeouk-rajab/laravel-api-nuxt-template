@@ -12,7 +12,8 @@
     "lint:fix": "eslint . --fix",
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "screenshots": "playwright test --config=playwright.screenshots.config.ts"
   },
   "dependencies": {
     "nuxt": "^4.6.0",
