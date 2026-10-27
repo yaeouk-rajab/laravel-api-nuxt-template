@@ -4,7 +4,7 @@
 #   docker build --build-arg NUXT_PUBLIC_API_BASE=https://api.example.com/api \
 #                --build-arg NUXT_PUBLIC_API_ORIGIN=https://api.example.com frontend
 
-FROM node:22-slim AS build
+FROM node:26-slim AS build
 
 WORKDIR /app
 
@@ -22,7 +22,7 @@ ENV NUXT_PUBLIC_API_ORIGIN=$NUXT_PUBLIC_API_ORIGIN \
 
 RUN npm run build
 
-FROM node:22-slim AS runtime
+FROM node:26-slim AS runtime
 
 WORKDIR /app
 
