@@ -7,31 +7,3 @@
 # id = "GHSA-xxxx-xxxx-xxxx"
 # ignoreUntil = 2026-12-31T00:00:00Z
 # reason = "Package X version Y, no upstream fix yet. Only reachable via <path>; <why it does not matter>."
-
-[[IgnoredVulns]]
-id = "GHSA-858h-whjf-mvg5"
-ignoreUntil = 2026-11-09
-reason = """
-simple-git < 4 / argv-parser < 2.0.1, reached only through Nuxt dev tooling (@nuxt/devtools via nuxt); used by the dev server, never in the production build or runtime. A fix exists, but simple-git 4 has no default export and breaks @nuxt/devtools' import, so 'nuxt prepare' and 'npm ci' fail with the upgrade. The only released devtools line (4.0.0-beta.4) is a prerelease. Before the expiry date: check for a stable @nuxt/devtools that supports simple-git >= 4, bump it, and delete this entry; otherwise re-confirm and renew.
-"""
-
-[[IgnoredVulns]]
-id = "GHSA-g4wm-2vf7-vfgr"
-ignoreUntil = 2026-11-09
-reason = """
-simple-git < 4 / argv-parser < 2.0.1, reached only through Nuxt dev tooling (@nuxt/devtools via nuxt); used by the dev server, never in the production build or runtime. A fix exists, but simple-git 4 has no default export and breaks @nuxt/devtools' import, so 'nuxt prepare' and 'npm ci' fail with the upgrade. The only released devtools line (4.0.0-beta.4) is a prerelease. Before the expiry date: check for a stable @nuxt/devtools that supports simple-git >= 4, bump it, and delete this entry; otherwise re-confirm and renew.
-"""
-
-[[IgnoredVulns]]
-id = "GHSA-x6jw-m9v5-85vh"
-ignoreUntil = 2026-11-09
-reason = """
-simple-git < 4 / argv-parser < 2.0.1, reached only through Nuxt dev tooling (@nuxt/devtools via nuxt); used by the dev server, never in the production build or runtime. A fix exists, but simple-git 4 has no default export and breaks @nuxt/devtools' import, so 'nuxt prepare' and 'npm ci' fail with the upgrade. The only released devtools line (4.0.0-beta.4) is a prerelease. Before the expiry date: check for a stable @nuxt/devtools that supports simple-git >= 4, bump it, and delete this entry; otherwise re-confirm and renew.
-"""
-
-[[IgnoredVulns]]
-id = "GHSA-v5rq-49vh-5v5c"
-ignoreUntil = 2026-11-09
-reason = """
-simple-git < 4 / argv-parser < 2.0.1, reached only through Nuxt dev tooling (@nuxt/devtools via nuxt); used by the dev server, never in the production build or runtime. A fix exists, but simple-git 4 has no default export and breaks @nuxt/devtools' import, so 'nuxt prepare' and 'npm ci' fail with the upgrade. The only released devtools line (4.0.0-beta.4) is a prerelease. Before the expiry date: check for a stable @nuxt/devtools that supports simple-git >= 4, bump it, and delete this entry; otherwise re-confirm and renew.
-"""
