@@ -24,6 +24,7 @@ _Last updated: 2026-10-27. Starter template extracted from `bookslot`; update wh
 
 - `osv-scanner.toml`, every entry expiring 2026-11-09 (earlier than the source repos' 2026-11-15): `braces` GHSA-vfj7-8cjw-p6xm; `node-forge` GHSA-86w9-cpqp-85rv; `simple-git` GHSA-858h-whjf-mvg5, GHSA-g4wm-2vf7-vfgr and GHSA-x6jw-m9v5-85vh, and `@simple-git/argv-parser` GHSA-v5rq-49vh-5v5c (via `nuxt` and `@nuxt/test-utils` -> `@nuxt/devtools`; the fix needs a stable `@nuxt/devtools` that supports simple-git 4, and the only such line is 4.0.0-beta.4, a prerelease that is not adopted). After that date the scan fails until each entry is renewed or removed. The scan is not a required check, so merges still work, but re-check each advisory for a fix before then.
 - 2026-10-27: the `braces` GHSA-vfj7-8cjw-p6xm entry described above was removed (osv-scanner flags it as an unused ignore); nothing else here changed.
+- 2026-10-27: the `node-forge` GHSA-86w9-cpqp-85rv entry was removed: the lockfile now has node-forge 1.4.2 (`npm audit` reports 0 vulnerabilities; listhen allows `^1.4.0`). The `nuxt` GHSA-vjh5-4x84-xrqp entry was removed after the bump to nuxt 4.6.3 (the osv-scanner check on that PR is the evidence). The four `simple-git` entries stay until 2026-11-09: nuxt 4.6.3 still depends on `@nuxt/devtools` ^3.4.4, and `@nuxt/devtools` 4.0.0 (which no longer depends on simple-git) is not adopted by nuxt yet.
 
 ## Notes
 

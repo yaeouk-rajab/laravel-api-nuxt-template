@@ -9,18 +9,6 @@
 # reason = "Package X version Y, no upstream fix yet. Only reachable via <path>; <why it does not matter>."
 
 [[IgnoredVulns]]
-id = "GHSA-86w9-cpqp-85rv"
-ignoreUntil = 2026-11-09
-reason = """
-node-forge RSA PKCS#1 v1.5 signature-verification bypass. Reached only via
-build/dev tooling (Nuxt CLI/devtools code-signing helpers); never part of the
-runtime server or client bundle. No patched release exists upstream as of
-2026-10-10. Before the expiry date: check for a fixed node-forge or a
-tooling release that drops it; if so delete this entry, otherwise re-confirm
-and renew.
-"""
-
-[[IgnoredVulns]]
 id = "GHSA-858h-whjf-mvg5"
 ignoreUntil = 2026-11-09
 reason = """
@@ -46,18 +34,4 @@ id = "GHSA-v5rq-49vh-5v5c"
 ignoreUntil = 2026-11-09
 reason = """
 simple-git < 4 / argv-parser < 2.0.1, reached only through Nuxt dev tooling (@nuxt/devtools via nuxt); used by the dev server, never in the production build or runtime. A fix exists, but simple-git 4 has no default export and breaks @nuxt/devtools' import, so 'nuxt prepare' and 'npm ci' fail with the upgrade. The only released devtools line (4.0.0-beta.4) is a prerelease. Before the expiry date: check for a stable @nuxt/devtools that supports simple-git >= 4, bump it, and delete this entry; otherwise re-confirm and renew.
-"""
-
-[[IgnoredVulns]]
-id = "GHSA-vjh5-4x84-xrqp"
-ignoreUntil = 2026-11-07T00:00:00Z
-reason = """
-nuxt 4.6.2 and @nuxt/nitro-server 4.6.2 (medium, CVSS 6.3). osv-scanner
-reports the fixed version as 4.6.2, the version already installed, and 4.6.2
-is the latest nuxt release (checked 2026-10-24), so there is nothing newer to
-upgrade to: this looks like an advisory-data inconsistency or a fix that has
-not shipped yet. The advisory text could not be retrieved from the sandbox
-that added this entry, so reachability has NOT been assessed. Before the
-expiry date: read the advisory, check for a nuxt release newer than 4.6.2,
-and either bump and delete this entry or document reachability and renew.
 """
