@@ -16,7 +16,7 @@
     "screenshots": "playwright test --config=playwright.screenshots.config.ts"
   },
   "dependencies": {
-    "nuxt": "^4.6.2",
+    "nuxt": "^4.6.4",
     "ofetch": "^1.5.1",
     "vue": "^3.5.43",
     "vue-router": "^5.3.1"
